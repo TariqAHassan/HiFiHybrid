@@ -63,7 +63,7 @@ Initial results from this model are quite promising.
 
 The BigVGAN paper leverages a lot of evaluation metrics (M-STFT, PESQ, MCD, etc.)
 which, regrettably, I have not yet had time to implement. However, a simple
-plot of the reconstruction error over time on the [MusicNet dataset](https://zenodo.org/record/5120004#.Ysc7SC_b0YI) 
+plot of the L1 reconstruction error over time on the [MusicNet dataset](https://zenodo.org/record/5120004#.Ysc7SC_b0YI) 
 is easy to obtain and still quite instructive.
 
 ![](/assets/mel_loss.png)
