@@ -68,6 +68,9 @@ is easy to obtain and still quite instructive.
 
 ![](/assets/mel_loss.png)
 
+This plot shows $\| mel(x) - mel(G(x)) \|_{1}$ over time, where $mel$ computes the mel spectrogram of a waveform,
+$x$ is the original audio waveform and `G()` is the vocoding generator.
+
 ## References
 
   * Some code used here was adapted from https://github.com/jik876/hifi-gan
