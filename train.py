@@ -82,7 +82,7 @@ def main(
     n_mels: int = 128,
     train_seq_len: int = 2**13,
     # Validation
-    val_seq_len=2**17,
+    val_seq_len: int = 2**17,
     # Output
     output_path: Optional[Path] = None,
 ) -> None:
