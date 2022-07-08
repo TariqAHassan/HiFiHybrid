@@ -11,20 +11,20 @@ from typing import Any, Optional
 
 import pytorch_lightning as pl
 import torch
-from pytorch_lightning.utilities.types import (
-    _METRIC_COLLECTION as METRIC_COLLECTION,  # noqa
+from pytorch_lightning.utilities.types import (  # noqa
+    _METRIC_COLLECTION as METRIC_COLLECTION,
 )
 from pytorch_lightning.utilities.warnings import LightningDeprecationWarning
 from torch.nn import functional as F
 from torch.optim.lr_scheduler import ExponentialLR
 
-from hifihybrid.utils.saving import audio_saver, spec_grid_saver  # noqa
-from hifihybrid.utils.metrics import BestMetricTracker
-from hifihybrid.utils.training import compute_total_norm, update_average
 from hifihybrid.discriminator.model import Discriminator
 from hifihybrid.dsp import MelSpec
 from hifihybrid.generator.model import Generator
 from hifihybrid.loss import LeastSquaresLoss
+from hifihybrid.utils.metrics import BestMetricTracker
+from hifihybrid.utils.saving import audio_saver, spec_grid_saver  # noqa
+from hifihybrid.utils.training import compute_total_norm, update_average
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=LightningDeprecationWarning)

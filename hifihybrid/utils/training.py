@@ -3,10 +3,11 @@
     Training
 
 """
-import torch
 import math
+from typing import Iterable, Optional, Union
+
+import torch
 from torch import nn
-from typing import Optional, Union, Iterable
 
 
 def count_parameters(model: nn.Module, grad_req: bool = True) -> int:

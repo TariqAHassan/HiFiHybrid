@@ -3,15 +3,13 @@
     Run HiFi
 
 """
-from pathlib import Path
-
-import torch
-
 from datetime import datetime
 from multiprocessing import cpu_count
+from pathlib import Path
+from typing import Optional
 
 import fire
-from typing import Optional
+import torch
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import WandbLogger
@@ -20,9 +18,8 @@ from torch.utils.data import DataLoader
 
 from hifihybrid.data.datasets.chunk import AudioChunkDataset
 from hifihybrid.data.datasets.sized import SizedDataset
-
-from hifihybrid.utils.reproducibility import SEED_VALUE, seed_everything
 from hifihybrid.hifi import HiFiHybrid
+from hifihybrid.utils.reproducibility import SEED_VALUE, seed_everything
 
 seed_everything(deterministic_cudnn=False)
 

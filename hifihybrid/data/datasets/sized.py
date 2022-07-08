@@ -6,11 +6,13 @@
 from typing import Any
 
 from torch.utils.data import Dataset
+
 from hifihybrid.data.datasets.chunk import AudioChunkDataset
 
 
 class SizedDataset(Dataset):
     """Adapt a finite AudioChunkDataset into one of arbitrary size."""
+
     def __init__(self, dataset: AudioChunkDataset, size: int) -> None:
         super().__init__()
         self.dataset = dataset
