@@ -124,7 +124,7 @@ def main(
         n_mels=n_mels,
         sample_rate=sample_rate,
         start_time=START_TIME,
-        base_dir=_ensure_exists(output_path or Path.cwd().joinpath("hifi")),
+        base_dir=_ensure_exists(output_path or Path.cwd().joinpath("hifi_output")),
         dataset=Path(data_path).name,
     )
     Trainer(
