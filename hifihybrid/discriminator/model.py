@@ -43,6 +43,6 @@ if __name__ == "__main__":
     self = d = Discriminator(2**16)
     print(f"D(x) Params: {count_parameters(d):,}")
 
-    fake, real = torch.randn(2, 1, d.seq_len)  # [gen/ref, batch, seq_len]
+    fake, real = torch.randn(2, 1, d.seq_len)  # [fake/real, batch, seq_len]
     output = d(fake, real)
     assert isinstance(output, DiscriminatorOutput)
