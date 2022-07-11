@@ -63,13 +63,20 @@ Initial results from this model are quite promising.
 
 The BigVGAN paper leverages a lot of evaluation metrics (M-STFT, PESQ, MCD, etc.)
 which, regrettably, I have not yet had time to implement. However, a simple
-plot of the L1 reconstruction error over time on the [MusicNet dataset](https://zenodo.org/record/5120004#.Ysc7SC_b0YI) 
+plot of the L1 reconstruction error over time on the [Expanded Groove dataset](https://magenta.tensorflow.org/datasets/e-gmd) 
 is easy to obtain and still quite instructive.
 
-![](/assets/mel_loss.png)
+![](/assets/reconstruction_l1.png)
 
 This plot shows $|| mel(x) - mel(G(mel(x))) ||_{1}$ over time during validation, where $mel$ computes the mel spectrogram 
 of a waveform, $x$ is the original audio waveform and $G$ is the vocoding generator. 
+
+The figure below shows the mel spectrograms at the end of training. 
+
+![](/assets/reconstruction_mel.png)
+
+The spectrogram on the top is the original and the spectrogram immediately below it is the reconstruction
+produced by the model.
 
 ## References
 
