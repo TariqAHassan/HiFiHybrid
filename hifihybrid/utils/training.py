@@ -25,6 +25,7 @@ def update_average(
     model_src: nn.Module,
     beta: Optional[Union[int, float]],
 ) -> None:
+    # Adapted from https://github.com/akanimax/BMSG-GAN
     toggle_grad(model_tgt, requires_grad=False)
     toggle_grad(model_src, requires_grad=False)
 
