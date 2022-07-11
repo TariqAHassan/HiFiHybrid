@@ -96,11 +96,10 @@ class UpDownSnake1d(Snake1d):
 
         self.lowpass_conv0 = LowPassConv1d(in_channels, sr=sr, m=m)
         self.lowpass_conv1 = LowPassConv1d(in_channels, sr=sr, m=m)
-        self.snake1d = Snake1d(in_channels)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.lowpass_conv0(x)
-        x = self.snake1d(x)
+        x = super().forward(x)
         x = self.lowpass_conv1(x)
         return x
 
