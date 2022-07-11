@@ -75,8 +75,8 @@ The figure below shows the mel spectrograms at the end of training.
 
 ![](/assets/reconstruction_mel.png)
 
-The spectrograms on the top are the originals and the spectrograms immediately below them are the reconstructions
-produced by the model.
+Each row contains pairs of spectrograms. The spectrograms on top are the originals and the spectrograms 
+immediately below them are the reconstructions produced by the model. 
 
 ## References
 
