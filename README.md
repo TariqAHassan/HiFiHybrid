@@ -19,6 +19,14 @@ Thus, this code is essentially a hybrid between HiFi and BigVGAN.
 python train.py /path/to/data/goes/here
 ```
 
+## Installation
+
+```sh
+pip install git+git://github.com/TariqAHassan/HifiHybrid
+```
+
+Requires Python 3.9+
+
 #### Help
 
 Information on training the model can be found by running the following command:
